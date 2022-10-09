@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D11BCD54289B0D2100D6E1F8 /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D11BCD53289B0CEB00D6E1F8 /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D150568A28553AD00052D3F8 /* WiiKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D150568928553AD00052D3F8 /* WiiKit.xcassets */; };
+		D15F04E227B204F7006C2935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */; };
+		F279D49E2726E81400AE30B9 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D49D2726E81400AE30B9 /* PersonDetailView.swift */; };
+		F279D4A22726ED9600AE30B9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D4A12726ED9600AE30B9 /* CircleImage.swift */; };
+		F279D4B22727329400AE30B9 /* PersonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D4B12727329400AE30B9 /* PersonsListView.swift */; };
+		F27E110226C46246009211CB /* WiiPersonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27E110126C46246009211CB /* WiiPersonApp.swift */; };
+		F27E110626C46246009211CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F27E110526C46246009211CB /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D11BCD52289B0CEB00D6E1F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1962D02284255ED009F85BE;
+			remoteInfo = WiiKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D15056432854A6220052D3F8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D11BCD54289B0D2100D6E1F8 /* WiiKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiKit.xcodeproj; path = ../WiiKit/WiiKit.xcodeproj; sourceTree = "<group>"; };
+		D150568928553AD00052D3F8 /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
+		D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F279D49D2726E81400AE30B9 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
+		F279D4A12726ED9600AE30B9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		F279D4B12727329400AE30B9 /* PersonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListView.swift; sourceTree = "<group>"; };
+		F27E10FE26C46246009211CB /* WiiPersonIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WiiPersonIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27E110126C46246009211CB /* WiiPersonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiiPersonApp.swift; sourceTree = "<group>"; };
+		F27E110526C46246009211CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F27E110A26C46246009211CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F27E10FB26C46246009211CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D11BCD4F289B0CEB00D6E1F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D11BCD53289B0CEB00D6E1F8 /* WiiKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D17F7DB62842A6D600452E42 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2764B2926EF39F2005320B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F279D49D2726E81400AE30B9 /* PersonDetailView.swift */,
+				F279D4A12726ED9600AE30B9 /* CircleImage.swift */,
+				F279D4B12727329400AE30B9 /* PersonsListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F27E10F526C46246009211CB = {
+			isa = PBXGroup;
+			children = (
+				D150568928553AD00052D3F8 /* WiiKit.xcassets */,
+				F27E110026C46246009211CB /* WiiPerson */,
+				F27E10FF26C46246009211CB /* Products */,
+				D17F7DB62842A6D600452E42 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F27E10FF26C46246009211CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F27E10FE26C46246009211CB /* WiiPersonIOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F27E110026C46246009211CB /* WiiPerson */ = {
+			isa = PBXGroup;
+			children = (
+				F27E110126C46246009211CB /* WiiPersonApp.swift */,
+				D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */,
+				F27E110A26C46246009211CB /* Info.plist */,
+				F27E110526C46246009211CB /* Assets.xcassets */,
+				F2764B2926EF39F2005320B4 /* Views */,
+			);
+			path = WiiPerson;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F27E10FD26C46246009211CB /* WiiPersonIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F27E110D26C46246009211CB /* Build configuration list for PBXNativeTarget "WiiPersonIOS" */;
+			buildPhases = (
+				F27E10FA26C46246009211CB /* Sources */,
+				F27E10FB26C46246009211CB /* Frameworks */,
+				F27E10FC26C46246009211CB /* Resources */,
+				D15056432854A6220052D3F8 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WiiPersonIOS;
+			packageProductDependencies = (
+			);
+			productName = Personnel;
+			productReference = F27E10FE26C46246009211CB /* WiiPersonIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F27E10F626C46246009211CB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F27E10FD26C46246009211CB = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = F27E10F926C46246009211CB /* Build configuration list for PBXProject "WiiPerson" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F27E10F526C46246009211CB;
+			packageReferences = (
+			);
+			productRefGroup = F27E10FF26C46246009211CB /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D11BCD4F289B0CEB00D6E1F8 /* Products */;
+					ProjectRef = D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				F27E10FD26C46246009211CB /* WiiPersonIOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D11BCD53289B0CEB00D6E1F8 /* WiiKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WiiKit.framework;
+			remoteRef = D11BCD52289B0CEB00D6E1F8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F27E10FC26C46246009211CB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D150568A28553AD00052D3F8 /* WiiKit.xcassets in Resources */,
+				D15F04E227B204F7006C2935 /* LaunchScreen.storyboard in Resources */,
+				F27E110626C46246009211CB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F27E10FA26C46246009211CB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F279D4A22726ED9600AE30B9 /* CircleImage.swift in Sources */,
+				F279D49E2726E81400AE30B9 /* PersonDetailView.swift in Sources */,
+				F27E110226C46246009211CB /* WiiPersonApp.swift in Sources */,
+				F279D4B22727329400AE30B9 /* PersonsListView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F27E110B26C46246009211CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F27E110C26C46246009211CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F27E110E26C46246009211CB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WiiPerson/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wiipuri.org.Personnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F27E110F26C46246009211CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8GMTTB5285;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = WiiPerson/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = wiipuri.org.Personnel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F27E10F926C46246009211CB /* Build configuration list for PBXProject "WiiPerson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27E110B26C46246009211CB /* Debug */,
+				F27E110C26C46246009211CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F27E110D26C46246009211CB /* Build configuration list for PBXNativeTarget "WiiPersonIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27E110E26C46246009211CB /* Debug */,
+				F27E110F26C46246009211CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F27E10F626C46246009211CB /* Project object */;
+}
