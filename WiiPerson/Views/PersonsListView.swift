@@ -111,8 +111,9 @@ extension PersonsListView {
                     }
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Add") {
-                            let newPerson = Person(data: personData)
-                            /// append
+//                            let newPerson = Person(data: personData)
+                            sqlPersonINSERT(data: personData)
+                            personnelModel.reload()
                             isPresentedAddSheet.toggle()
                         }
                     }

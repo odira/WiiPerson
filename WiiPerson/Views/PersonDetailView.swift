@@ -58,11 +58,12 @@ struct PersonDetailView: View {
                         Text("\(person.sex.label)")
                             .foregroundColor(person.sex.color)
                     }
-                    HStack {
-                        Text("Дата рождения:")
-                        Text(person.birthDate)
-                        Text(" (\(person.age!) лет)")
-                    }
+                    if person.birthday != nil {
+                        HStack {
+                            Text("Дата рождения:")
+                            Text(person.birthDate)
+                            Text(" (\(person.age!) лет)")
+                        }}
                 }
                 
                 Divider()
@@ -123,7 +124,7 @@ struct PersonDetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
                                 isPresentingEditView.toggle()
-                                person.sqlUpdatePerson(from: data)
+//                                person.sqlUpdatePerson(from: data)
                                 personnelModel.reload()
                             }
                         }
