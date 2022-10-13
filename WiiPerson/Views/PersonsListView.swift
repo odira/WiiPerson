@@ -42,7 +42,7 @@ struct PersonsListView: View {
         return results
     }
     
-    private var personData = Person.Data()
+    @State var personData = Person.Data()
     
     // MARK: - View
     
@@ -82,11 +82,11 @@ struct PersonsListView: View {
                         }
                     }
             )
-            .sheet(isPresented: $isPresentedSearchSheet) {
-                PersonFiltersView(isPresented: self.$isPresentedSearchSheet, personFilters: personFilters)
-            }
             .sheet(isPresented: $isPresentedAddSheet) {
                 addPersonView(isPresented: $isPresentedAddSheet)
+            }
+            .sheet(isPresented: $isPresentedSearchSheet) {
+                PersonFiltersView(isPresented: self.$isPresentedSearchSheet, personFilters: personFilters)
             }
         }
     }
@@ -106,8 +106,23 @@ struct PersonsListView_Previews: PreviewProvider {
 
 extension PersonsListView {
     func addPersonView(isPresented: Binding<Bool>) -> some View {
-        VStack {
-            
+        NavigationView {
+            PersonEditView(data: self.$personData)
+                .toolbar {
+                    ToolbarItem(placement: .cancellationAction) {
+                        Button("Dismiss") {
+                            personData = Person.Data()
+                            isPresentedAddSheet.toggle()
+                        }
+                    }
+                    ToolbarItem(placement: .confirmationAction) {
+                        Button("Add") {
+                            let newPerson = Person(data: personData)
+                            /// append
+                            isPresentedAddSheet.toggle()
+                        }
+                    }
+            }
         }
     }
 }
