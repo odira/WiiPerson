@@ -62,22 +62,16 @@ struct PersonsListView: View {
             .navigationBarItems(
                 leading:
                     HStack {
-                        Button(action: {
-                            isPresentedAddSheet.toggle()
-                        }) {
+                        Button(action: { isPresentedAddSheet.toggle() }) {
                             Image(systemName: "plus")
                         }
                     },
                 trailing:
                     HStack {
-                        Button(action: {
-                            isPresentedSearchSheet.toggle()
-                        }) {
+                        Button(action: { isPresentedSearchSheet.toggle() }) {
                             Image(systemName: "magnifyingglass")
                         }
-                        Button(action: {
-                            personFilters.update()
-                        }) {
+                        Button(action: { personFilters.update() }) {
                             Image(systemName: "repeat")
                         }
                     }
@@ -122,7 +116,7 @@ extension PersonsListView {
                             isPresentedAddSheet.toggle()
                         }
                     }
-            }
+                }
         }
     }
 }
