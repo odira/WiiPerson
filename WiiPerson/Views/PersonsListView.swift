@@ -7,6 +7,7 @@ struct PersonsListView: View {
     
     @State private var isPresentedSearchSheet = false
     @State private var isPresentedAddSheet = false
+    @State private var isPresentedConfirmationSheet = false
     
     @State private var searchExpr: String = ""
     
@@ -52,6 +53,31 @@ struct PersonsListView: View {
                 ForEach(filteredPersons) { person in
                     NavigationLink(destination: PersonDetailView(person: person)) {
                         PersonCard(for: person)
+                    }
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            withAnimation {
+                                isPresentedConfirmationSheet.toggle()
+                            }
+                        } label: {
+                            Image(systemName: "trash")
+                        }
+                    }
+                    .confirmationDialog(
+                        "Are you sure?",
+                        isPresented: $isPresentedConfirmationSheet,
+                        titleVisibility: .visible
+                    ) {
+                        Button("Yes", role: .destructive) {
+                            withAnimation {
+                                personnelModel.reload()
+                            }
+                        }
+                        .keyboardShortcut(.defaultAction)
+                        
+                        Button("No", role: .cancel) {}
+                    } message: {
+                        Text("You are going to delete person...")
                     }
                 }
             }
