@@ -107,8 +107,8 @@ struct PersonDetailView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             Button("Edit") {
-                isPresentingEditView.toggle()
                 data = person.data
+                isPresentingEditView.toggle()
             }
         }
         .sheet(isPresented: $isPresentingEditView) {
@@ -124,8 +124,7 @@ struct PersonDetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
                                 isPresentingEditView.toggle()
-                                person.data = data
-                                sqlUpdatePerson(person)
+                                sqlUpdatePerson(person, with: data)
                                 personnelModel.reload()
                             }
                         }
