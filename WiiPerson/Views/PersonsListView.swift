@@ -11,6 +11,8 @@ struct PersonsListView: View {
     
     @State private var searchExpr: String = ""
     
+    @State private var selectedPerson: Person = Person.samples[0]
+    
     var filteredPersons: [Person] {
         var results = personnelModel.persons
         
@@ -57,6 +59,7 @@ struct PersonsListView: View {
                     .swipeActions {
                         Button(role: .destructive) {
                             withAnimation {
+                                selectedPerson = person
                                 isPresentedConfirmationSheet.toggle()
                             }
                         } label: {
@@ -70,6 +73,7 @@ struct PersonsListView: View {
                     ) {
                         Button("Yes", role: .destructive) {
                             withAnimation {
+                                sqlDeletePerson(selectedPerson)
                                 personnelModel.reload()
                             }
                         }

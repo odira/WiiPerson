@@ -55,7 +55,7 @@ struct PersonDetailView: View {
                 VStack(alignment: .leading) {
                     HStack {
                         Text("Пол:")
-                        Text("\(person.sex.label)")
+                        Text("\(person.sex.rulabel)")
                             .foregroundColor(person.sex.color)
                     }
                     if person.birthday != nil {
@@ -124,7 +124,8 @@ struct PersonDetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
                                 isPresentingEditView.toggle()
-//                                person.sqlUpdatePerson(from: data)
+                                person.data = data
+                                sqlUpdatePerson(person)
                                 personnelModel.reload()
                             }
                         }
