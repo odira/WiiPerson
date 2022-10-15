@@ -33,11 +33,12 @@ struct PersonDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 3) {
                     HStack {
-                        if person.position != nil {
-                            Text("\(person.position!)")
-                        } else {
-                            Text("No positional data")
-                        }
+                        Text("POSITION")
+//                        if person.positionId != nil {
+//                            Text("\(person.position!)")
+//                        } else {
+//                            Text("No positional data")
+//                        }
                         Spacer()
                         Text("смена \(person.shiftNum!) РДЦ")
                     }
