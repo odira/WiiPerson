@@ -3,6 +3,7 @@ import WiiKit
 
 struct PersonDetailView: View {
     @EnvironmentObject var personnelModel: PersonnelModel
+    @EnvironmentObject var positionModel: PositionModel
     
     var person: Person
     
@@ -33,12 +34,11 @@ struct PersonDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 3) {
                     HStack {
-                        Text("POSITION")
-//                        if person.positionId != nil {
-//                            Text("\(person.position!)")
-//                        } else {
-//                            Text("No positional data")
-//                        }
+                        if let position = positionModel.findPosition(for: person) {
+                            Text("\(position.position)")
+                        } else {
+                            Text("No positional data")
+                        }
                         Spacer()
                         Text("смена \(person.shiftNum!) РДЦ")
                     }
@@ -137,6 +137,12 @@ struct PersonDetailView: View {
 
 struct PersonDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PersonDetailView(person: Person.samples[0])
+        Group {
+            PersonDetailView(person: Person.samples[0])
+                .preferredColorScheme(.light)
+            PersonDetailView(person: Person.samples[0])
+                .preferredColorScheme(.dark)
+        }
+        .environmentObject(PositionModel())
     }
 }
