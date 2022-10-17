@@ -67,7 +67,7 @@ struct PersonDetailView: View {
                         }}
                 }
                 
-                Divider()
+//                Divider()
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -87,10 +87,23 @@ struct PersonDetailView: View {
                     }
                 }
                 
-                Divider()
+//                Divider()
+                
+                Text("Допуски к работе")
+                if let ids = person.positionsArr {
+                    ForEach(ids, id: \.self) { id in
+                        let position = positionModel.findPosition(byId: id)
+                        PositionCard(for: position!)
+                    }
+                } else {
+                    Text("Сведения о допусках к работе отсутствуют")
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+                
+//                Divider()
                 
                 Text("Дополнительные сведения")
-
                 if person.note != nil {
                     Text(person.note!)
                         .font(.subheadline)
@@ -103,7 +116,7 @@ struct PersonDetailView: View {
             }
             .padding()
             
-            Spacer()
+//            Spacer()
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
