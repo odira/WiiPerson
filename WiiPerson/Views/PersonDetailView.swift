@@ -4,6 +4,7 @@ import WiiKit
 struct PersonDetailView: View {
     @EnvironmentObject var personnelModel: PersonnelModel
     @EnvironmentObject var positionModel: PositionModel
+    @EnvironmentObject var sectorsPoolModel: SectorsPoolModel
     
     var person: Person
     
@@ -51,7 +52,7 @@ struct PersonDetailView: View {
                     }
                 }
                 
-                Divider()
+//                Divider()
                 
                 VStack(alignment: .leading) {
                     HStack {
@@ -84,6 +85,14 @@ struct PersonDetailView: View {
                         } else {
                             Text("No email")
                         }
+                    }
+                }
+                
+                HStack {
+                    Text("Направление")
+                    if let id = person.sectorsPoolId {
+                        let pool = sectorsPoolModel.findSectorsPool(byId: id)
+                        SectorsPoolCard(for: pool!)
                     }
                 }
                 
@@ -139,7 +148,6 @@ struct PersonDetailView: View {
                             Button("Save") {
                                 isPresentingEditView.toggle()
                                 personnelModel.sqlPersonUPDATE(person, with: data)
-                                personnelModel.reload()
                             }
                         }
                     }
@@ -157,5 +165,6 @@ struct PersonDetailView_Previews: PreviewProvider {
                 .preferredColorScheme(.dark)
         }
         .environmentObject(PositionModel())
+        .environmentObject(SectorsPoolModel())
     }
 }
