@@ -73,8 +73,8 @@ struct PersonsListView: View {
                     ) {
                         Button("Yes", role: .destructive) {
                             withAnimation {
-                                sqlDeletePerson(selectedPerson)
-                                personnelModel.reload()
+                                personnelModel.sqlPersonDELETE(selectedPerson)
+//                                personnelModel.reload()
                             }
                         }
                         .keyboardShortcut(.defaultAction)
@@ -142,8 +142,8 @@ extension PersonsListView {
                     ToolbarItem(placement: .confirmationAction) {
                         Button("Add") {
 //                            let newPerson = Person(data: personData)
-                            sqlPersonINSERT(data: personData)
-                            personnelModel.reload()
+                            personnelModel.sqlPersonINSERT(data: personData)
+//                            personnelModel.reload()
                             isPresentedAddSheet.toggle()
                         }
                     }

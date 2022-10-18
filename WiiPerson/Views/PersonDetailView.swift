@@ -138,7 +138,7 @@ struct PersonDetailView: View {
                         ToolbarItem(placement: .confirmationAction) {
                             Button("Save") {
                                 isPresentingEditView.toggle()
-                                sqlUpdatePerson(person, with: data)
+                                personnelModel.sqlPersonUPDATE(person, with: data)
                                 personnelModel.reload()
                             }
                         }
