@@ -5,6 +5,7 @@ struct PersonDetailView: View {
     @EnvironmentObject var personnelModel: PersonnelModel
     @EnvironmentObject var positionModel: PositionModel
     @EnvironmentObject var sectorsPoolModel: SectorsPoolModel
+    @EnvironmentObject var sectorModel: SectorModel
     
     var person: Person
     
@@ -96,31 +97,50 @@ struct PersonDetailView: View {
                     }
                 }
                 
-//                Divider()
-                
-                Text("Допуски к работе")
-                if let ids = person.positionsArr {
-                    ForEach(ids, id: \.self) { id in
-                        let position = positionModel.findPosition(byId: id)
-                        PositionCard(for: position!)
+                VStack {
+                    Text("Допуски на секторах")
+                    if person.sectorsArr.isEmpty {
+                        Text("Сведения о допусках на секторах отсутствуют")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    } else {
+                        let ids = person.sectorsArr
+                        ForEach(ids, id: \.self) { id in
+                            let sector = sectorModel.findSector(byId: id)
+                            SectorCard(for: sector!)
+                        }
                     }
-                } else {
-                    Text("Сведения о допусках к работе отсутствуют")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
                 }
                 
 //                Divider()
                 
-                Text("Дополнительные сведения")
-                if person.note != nil {
-                    Text(person.note!)
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
-                } else {
-                    Text("Дополнительные сведения отсутствуют")
-                        .font(.subheadline)
-                        .foregroundColor(.secondary)
+                VStack {
+                    Text("Допуски к работе")
+                    if let ids = person.positionsArr {
+                        ForEach(ids, id: \.self) { id in
+                            let position = positionModel.findPosition(byId: id)
+                            PositionCard(for: position!)
+                        }
+                    } else {
+                        Text("Сведения о допусках к работе отсутствуют")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                
+//                Divider()
+                
+                VStack {
+                    Text("Дополнительные сведения")
+                    if person.note != nil {
+                        Text(person.note!)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    } else {
+                        Text("Дополнительные сведения отсутствуют")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
                 }
             }
             .padding()
@@ -166,5 +186,6 @@ struct PersonDetailView_Previews: PreviewProvider {
         }
         .environmentObject(PositionModel())
         .environmentObject(SectorsPoolModel())
+        .environmentObject(SectorModel())
     }
 }
