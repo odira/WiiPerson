@@ -35,117 +35,19 @@ struct PersonDetailView: View {
                 .padding(.bottom, 5)
                 
                 VStack(alignment: .leading, spacing: 3) {
-                    HStack {
-                        if let position = positionModel.findPosition(for: person) {
-                            Text("\(position.position)")
-                        } else {
-                            Text("No positional data")
-                        }
-                        Spacer()
-                        Text("смена \(person.shiftNum!) РДЦ")
-                    }
-                    HStack {
-                        Text("Табельный номер \(person.tabNumString)")
-                        Spacer()
-                        if let klass = person.klass {
-                            Text("\(klass) класс")
-                        }
-                    }
-                }
-                
-//                Divider()
-                
-                VStack(alignment: .leading) {
-                    HStack {
-                        Text("Пол:")
-                        Text("\(person.sex.rulabel)")
-                            .foregroundColor(person.sex.color)
-                    }
-                    if person.birthday != nil {
-                        HStack {
-                            Text("Дата рождения:")
-                            Text(person.birthDate)
-                            Text(" (\(person.age!) лет)")
-                        }}
-                }
-                
-//                Divider()
-                
-                VStack(alignment: .leading) {
-                    HStack {
-                        Image(systemName: "phone.fill")
-                            .foregroundColor(.green)
-                        Text("\(person.phoneNumber)")
-                    }
-                    
-                    HStack {
-                        Image(systemName: "envelope.fill")
-                            .foregroundColor(.blue)
-                        if person.email != nil {
-                            Text(person.email!)
-                        } else {
-                            Text("No email")
-                        }
-                    }
-                }
-                
-                HStack {
-                    Text("Направление")
-                    if let id = person.sectorsPoolId {
-                        let pool = sectorsPoolModel.findSectorsPool(byId: id)
-                        SectorsPoolCard(for: pool!)
-                    }
-                }
-                
-                VStack {
-                    Text("Допуски на секторах")
-                    if person.sectorsArr.isEmpty {
-                        Text("Сведения о допусках на секторах отсутствуют")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    } else {
-                        let ids = person.sectorsArr
-                        ForEach(ids, id: \.self) { id in
-                            let sector = sectorModel.findSector(byId: id)
-                            SectorCard(for: sector!)
-                        }
-                    }
-                }
-                
-//                Divider()
-                
-                VStack {
-                    Text("Допуски к работе")
-                    if let ids = person.positionsArr {
-                        ForEach(ids, id: \.self) { id in
-                            let position = positionModel.findPosition(byId: id)
-                            PositionCard(for: position!)
-                        }
-                    } else {
-                        Text("Сведения о допусках к работе отсутствуют")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
-                }
-                
-//                Divider()
-                
-                VStack {
-                    Text("Дополнительные сведения")
-                    if person.note != nil {
-                        Text(person.note!)
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    } else {
-                        Text("Дополнительные сведения отсутствуют")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
+                    positionAndShiftNumView()
+                    tabNumAndClassView()
+                    sexView()
+                    birthdayView()
+                    phoneView()
+                    emailView()
+                    sectorPoolView()
+                    sectorsView()
+                    positionAdmissionsView()
+                    noteView()
                 }
             }
             .padding()
-            
-//            Spacer()
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -187,5 +89,129 @@ struct PersonDetailView_Previews: PreviewProvider {
         .environmentObject(PositionModel())
         .environmentObject(SectorsPoolModel())
         .environmentObject(SectorModel())
+    }
+}
+
+extension PersonDetailView {
+    func positionAndShiftNumView() -> some View {
+        HStack {
+            if let position = positionModel.findPosition(for: person) {
+                PositionCard(for: position)
+            } else {
+                Text("No positional data")
+            }
+            Spacer()
+            ShiftCard(shift: person.shiftNum!)
+        }
+    }
+    
+    func tabNumAndClassView() -> some View {
+        HStack {
+            Text("Табельный номер \(person.tabNumString)")
+            Spacer()
+            if let klass = person.klass {
+                Text("\(klass) класс")
+            }
+        }
+    }
+    
+    func sexView() -> some View {
+        HStack {
+            Text("Пол:")
+            Text("\(person.sex.rulabel)")
+                .foregroundColor(person.sex.color)
+        }
+    }
+    
+    func birthdayView() -> some View {
+        HStack {
+            if person.birthday != nil {
+                Text("Дата рождения:")
+                Text(person.birthDate)
+                Text(" (\(person.age!) лет)")
+            } else {
+                EmptyView()
+            }
+        }
+    }
+    
+    func phoneView() -> some View {
+        HStack {
+            Image(systemName: "phone.fill")
+                .foregroundColor(.green)
+            Text("\(person.phoneNumber)")
+        }
+    }
+    
+    func emailView() -> some View {
+        HStack {
+            Image(systemName: "envelope.fill")
+                .foregroundColor(.blue)
+            if person.email != nil {
+                Text(person.email!)
+            } else {
+                Text("No email")
+            }
+        }
+    }
+    
+    func sectorPoolView() -> some View {
+        HStack {
+            Text("Направление")
+            if let id = person.sectorsPoolId {
+                let pool = sectorsPoolModel.findSectorsPool(byId: id)
+                SectorsPoolCard(for: pool!)
+            }
+        }
+    }
+    
+    func sectorsView() -> some View {
+        VStack(alignment: .leading) {
+            Text("Допуски на секторах")
+            if person.sectorsArr.isEmpty {
+                Text("Сведения о допусках на секторах отсутствуют")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            } else {
+                let ids = person.sectorsArr
+                HStack {
+                    ForEach(ids, id: \.self) { id in
+                        let sector = sectorModel.findSector(byId: id)
+                        SectorCard(for: sector!)
+                    }
+                }
+            }
+        }
+    }
+    
+    func positionAdmissionsView() -> some View {
+        VStack(alignment: .leading) {
+            Text("Допуски к работе")
+            if let ids = person.positionsArr {
+                ForEach(ids, id: \.self) { id in
+                    let position = positionModel.findPosition(byId: id)
+                    PositionCard(for: position!)
+                }
+            } else {
+                Text("Сведения о допусках к работе отсутствуют")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
+    }
+    
+    func noteView() -> some View {
+        VStack(alignment: .leading) {
+            Text("Дополнительные сведения")
+            if person.note != nil {
+                Text(person.note!)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            } else {
+                Text("Дополнительные сведения отсутствуют")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
