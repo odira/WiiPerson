@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D11BCD54289B0D2100D6E1F8 /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D11BCD53289B0CEB00D6E1F8 /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D150568A28553AD00052D3F8 /* WiiKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D150568928553AD00052D3F8 /* WiiKit.xcassets */; };
 		D15F04E227B204F7006C2935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */; };
+		D1CBA223290561E500285FCD /* WiiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CBA222290561DB00285FCD /* WiiKit.framework */; };
+		D1CBA224290561E500285FCD /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1CBA222290561DB00285FCD /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F279D49E2726E81400AE30B9 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D49D2726E81400AE30B9 /* PersonDetailView.swift */; };
 		F279D4A22726ED9600AE30B9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D4A12726ED9600AE30B9 /* CircleImage.swift */; };
 		F279D4B22727329400AE30B9 /* PersonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D4B12727329400AE30B9 /* PersonsListView.swift */; };
@@ -18,9 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D11BCD52289B0CEB00D6E1F8 /* PBXContainerItemProxy */ = {
+		D1CBA221290561DB00285FCD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */;
+			containerPortal = D1CBA21D290561DB00285FCD /* WiiKit.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D1962D02284255ED009F85BE;
 			remoteInfo = WiiKit;
@@ -34,7 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D11BCD54289B0D2100D6E1F8 /* WiiKit.framework in Embed Frameworks */,
+				D1CBA224290561E500285FCD /* WiiKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -42,9 +43,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiKit.xcodeproj; path = ../WiiKit/WiiKit.xcodeproj; sourceTree = "<group>"; };
 		D150568928553AD00052D3F8 /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
 		D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D1CBA21D290561DB00285FCD /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiKit.xcodeproj; path = ../WiiKit/WiiKit.xcodeproj; sourceTree = "<group>"; };
 		F279D49D2726E81400AE30B9 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
 		F279D4A12726ED9600AE30B9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		F279D4B12727329400AE30B9 /* PersonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListView.swift; sourceTree = "<group>"; };
@@ -59,26 +60,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1CBA223290561E500285FCD /* WiiKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D11BCD4F289B0CEB00D6E1F8 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				D11BCD53289B0CEB00D6E1F8 /* WiiKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		D17F7DB62842A6D600452E42 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */,
+				D1CBA21D290561DB00285FCD /* WiiKit.xcodeproj */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1CBA21E290561DB00285FCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D1CBA222290561DB00285FCD /* WiiKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		F2764B2926EF39F2005320B4 /* Views */ = {
@@ -173,8 +175,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = D11BCD4F289B0CEB00D6E1F8 /* Products */;
-					ProjectRef = D11BCD4E289B0CEB00D6E1F8 /* WiiKit.xcodeproj */;
+					ProductGroup = D1CBA21E290561DB00285FCD /* Products */;
+					ProjectRef = D1CBA21D290561DB00285FCD /* WiiKit.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -185,11 +187,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		D11BCD53289B0CEB00D6E1F8 /* WiiKit.framework */ = {
+		D1CBA222290561DB00285FCD /* WiiKit.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = WiiKit.framework;
-			remoteRef = D11BCD52289B0CEB00D6E1F8 /* PBXContainerItemProxy */;
+			remoteRef = D1CBA221290561DB00285FCD /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
