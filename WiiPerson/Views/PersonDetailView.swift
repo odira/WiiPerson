@@ -59,10 +59,10 @@ struct PersonDetailView: View {
         .sheet(isPresented: $isPresentingEditView) {
             NavigationView {
                 PersonEditView(data: $data)
-                    .navigationTitle(person.surname)
+                    .navigationTitle("Editing Mode")
                     .toolbar {
                         ToolbarItem(placement: .cancellationAction) {
-                            Button("Cancel") {
+                            Button("Close") {
                                 isPresentingEditView.toggle()
                             }
                         }
