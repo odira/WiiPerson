@@ -168,14 +168,9 @@ extension PersonDetailView {
     func sectorsView() -> some View {
         VStack(alignment: .leading) {
             Text("Допуски на секторах")
-            if person.sectorsArr.isEmpty {
-                Text("Сведения о допусках на секторах отсутствуют")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            } else {
-                let ids = person.sectorsArr
+            ScrollView(.horizontal) {
                 HStack {
-                    ForEach(ids, id: \.self) { id in
+                    ForEach(person.sectorsArr, id: \.self) { id in
                         let sector = sectorModel.findSector(byId: id)
                         SectorCard(for: sector!)
                     }
