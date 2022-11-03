@@ -175,17 +175,7 @@ extension PersonDetailView {
     func positionAdmissionsView() -> some View {
         VStack(alignment: .leading) {
             Text("Допуски к работе")
-            if person.positionsArr.isEmpty {
-                Text("Сведения о допусках к работе отсутствуют")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
-            } else {
-                let ids = person.positionsArr
-                ForEach(ids, id: \.self) { id in
-                    let position = positionModel.findPosition(byId: id)
-                    PositionCard(for: position!)
-                }
-            }
+            PositionsArrayView(positionsArr: person.positionsArr)
         }
     }
     
