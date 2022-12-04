@@ -11,6 +11,8 @@
 		D15F04E227B204F7006C2935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */; };
 		D1CBA223290561E500285FCD /* WiiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CBA222290561DB00285FCD /* WiiKit.framework */; };
 		D1CBA224290561E500285FCD /* WiiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D1CBA222290561DB00285FCD /* WiiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D1F0B1E6293D596E0008AEAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0B1E5293D596E0008AEAE /* ContentView.swift */; };
+		D1F0B1EA293D5C040008AEAE /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1F0B1E9293D5C040008AEAE /* MainView.swift */; };
 		F279D49E2726E81400AE30B9 /* PersonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D49D2726E81400AE30B9 /* PersonDetailView.swift */; };
 		F279D4A22726ED9600AE30B9 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D4A12726ED9600AE30B9 /* CircleImage.swift */; };
 		F279D4B22727329400AE30B9 /* PersonsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F279D4B12727329400AE30B9 /* PersonsListView.swift */; };
@@ -46,6 +48,8 @@
 		D150568928553AD00052D3F8 /* WiiKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = WiiKit.xcassets; sourceTree = "<group>"; };
 		D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1CBA21D290561DB00285FCD /* WiiKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = WiiKit.xcodeproj; path = ../WiiKit/WiiKit.xcodeproj; sourceTree = "<group>"; };
+		D1F0B1E5293D596E0008AEAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D1F0B1E9293D5C040008AEAE /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		F279D49D2726E81400AE30B9 /* PersonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailView.swift; sourceTree = "<group>"; };
 		F279D4A12726ED9600AE30B9 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		F279D4B12727329400AE30B9 /* PersonsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsListView.swift; sourceTree = "<group>"; };
@@ -86,9 +90,11 @@
 		F2764B2926EF39F2005320B4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D1F0B1E5293D596E0008AEAE /* ContentView.swift */,
 				F279D49D2726E81400AE30B9 /* PersonDetailView.swift */,
 				F279D4A12726ED9600AE30B9 /* CircleImage.swift */,
 				F279D4B12727329400AE30B9 /* PersonsListView.swift */,
+				D1F0B1E9293D5C040008AEAE /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -114,10 +120,10 @@
 		F27E110026C46246009211CB /* WiiPerson */ = {
 			isa = PBXGroup;
 			children = (
-				F27E110126C46246009211CB /* WiiPersonApp.swift */,
-				D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */,
 				F27E110A26C46246009211CB /* Info.plist */,
+				D15F04E127B204F7006C2935 /* LaunchScreen.storyboard */,
 				F27E110526C46246009211CB /* Assets.xcassets */,
+				F27E110126C46246009211CB /* WiiPersonApp.swift */,
 				F2764B2926EF39F2005320B4 /* Views */,
 			);
 			path = WiiPerson;
@@ -215,6 +221,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F279D4A22726ED9600AE30B9 /* CircleImage.swift in Sources */,
+				D1F0B1EA293D5C040008AEAE /* MainView.swift in Sources */,
+				D1F0B1E6293D596E0008AEAE /* ContentView.swift in Sources */,
 				F279D49E2726E81400AE30B9 /* PersonDetailView.swift in Sources */,
 				F27E110226C46246009211CB /* WiiPersonApp.swift in Sources */,
 				F279D4B22727329400AE30B9 /* PersonsListView.swift in Sources */,

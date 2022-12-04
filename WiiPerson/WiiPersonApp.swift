@@ -12,7 +12,7 @@ struct WiiPersonApp: App {
     
     var body: some Scene {
         WindowGroup {
-            PersonsListView()
+            ContentView()
                 .environmentObject(personnelModel)
                 .environmentObject(positionModel)
                 .environmentObject(sectorsPoolModel)

@@ -35,15 +35,22 @@ struct PersonDetailView: View {
                 .padding(.bottom, 5)
                 
                 VStack(alignment: .leading, spacing: 3) {
-                    positionAndShiftNumView()
-                    tabNumAndClassView()
-                    sexView()
-                    birthdayView()
-                    phoneView()
-                    emailView()
-                    sectorPoolView()
+                    VStack(alignment: .leading, spacing: 3) {
+                        positionAndShiftNumView()
+                        tabNumAndClassView()
+                        sectorPoolView()
+                    }
+                    Divider()
+                    VStack(alignment: .leading, spacing: 3) {
+                        sexView()
+                        birthdayView()
+                        phoneView()
+                        emailView()
+                    }
+                    Divider()
                     sectorsView()
                     positionAdmissionsView()
+                    Divider()
                     noteView()
                 }
             }
