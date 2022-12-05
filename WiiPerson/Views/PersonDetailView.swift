@@ -49,6 +49,7 @@ struct PersonDetailView: View {
                     }
                     Divider()
                     sectorsView()
+                    Divider()
                     positionAdmissionsView()
                     Divider()
                     noteView()
