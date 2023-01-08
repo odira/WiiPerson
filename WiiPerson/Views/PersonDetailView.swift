@@ -176,7 +176,7 @@ extension PersonDetailView {
     func sectorsView() -> some View {
         VStack(alignment: .leading) {
             Text("Допуски на секторах")
-            SectorsArrayView(sectorsArr: person.sectorsArr)
+            SectorsArrayView(for: person.sectorsArr)
         }
     }
     
